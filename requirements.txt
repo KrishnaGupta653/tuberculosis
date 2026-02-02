@@ -4,4 +4,12 @@ numpy
 opencv-python-headless
 torch
 torchvision
+scikit-learn
+scipy
+scikit-image
+pywavelets
+pandas
+tqdm
+matplotlib
+seaborn
 werkzeug
