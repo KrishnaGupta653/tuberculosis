@@ -54,16 +54,24 @@ from werkzeug.utils import secure_filename
 import logging
 
 # Try to import from optimized model first, fall back to original
+# try:
+#     from model_final_fast import TBPredictor, Config
+#     print("✓ Using optimized model (model_final_fast.py)")
+# except ImportError:
+#     try:
+#         from model import TBPredictor, Config
+#         print("✓ Using original model (model.py)")
+#     except ImportError:
+#         print("ERROR: Could not import TBPredictor from model.py or model_optimized.py")
+#         exit(1)
 try:
     from model_final_fast import TBPredictor, Config
-    print("✓ Using optimized model (model_final_fast.py)")
-except ImportError:
-    try:
-        from model import TBPredictor, Config
-        print("✓ Using original model (model.py)")
-    except ImportError:
-        print("ERROR: Could not import TBPredictor from model.py or model_optimized.py")
-        exit(1)
+    print("✓ Loaded model_final_fast.py")
+except Exception as e:
+    print(f"❌ Failed to import model_final_fast.py: {e}")
+    TBPredictor = None
+    Config = None
+
 
 # ═══════════════════════════════════════════════════════════════════════════
 # FLASK APP SETUP
