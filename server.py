@@ -475,11 +475,11 @@ if __name__ == "__main__":
 
     # Set max upload size
     app.config['MAX_CONTENT_LENGTH'] = MAX_IMAGE_SIZE
-
+    port=init(os.environ.get("PORT",args.port)
     # Run server
     app.run(
-        host=args.host,
-        port=args.port,
-        debug=args.debug,
+        host="0.0.0.0",
+        port=port,
+        debug=False,
         threaded=True  # Enable multi-threading for concurrent requests
     )
