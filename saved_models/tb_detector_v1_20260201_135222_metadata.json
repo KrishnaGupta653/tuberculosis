@@ -1,0 +1,142 @@
+{
+  "model_name": "tb_detector_v1",
+  "timestamp": "20260201_135222",
+  "training_metrics": {
+    "test_accuracy": 0.5541082164328658,
+    "cv_mean_accuracy": 0.5396972480567956,
+    "cv_std_accuracy": 0.005661337569439637,
+    "sensitivity": 0.13026052104208416,
+    "specificity": 0.9779559118236473,
+    "precision": 0.8552631578947368,
+    "f1_score": 0.2260869565217391,
+    "confusion_matrix": [
+      [
+        488,
+        11
+      ],
+      [
+        434,
+        65
+      ]
+    ],
+    "training_time": {
+      "total": 2908.941306591034,
+      "phase1_extraction": 762.8854792118073,
+      "phase15_gpu": 34.580004930496216,
+      "phase2_quantum": 1942.9151039123535,
+      "phase3_cv": 149.44764351844788,
+      "phase4_final": 16.32427191734314
+    }
+  },
+  "quantum_history": [
+    {
+      "generation": 1,
+      "best_fitness": 0.5164249542344982,
+      "mean_fitness": 0.5142265965227042,
+      "features_selected": 541
+    },
+    {
+      "generation": 2,
+      "best_fitness": 0.5164249542344982,
+      "mean_fitness": 0.5135923976687671,
+      "features_selected": 541
+    },
+    {
+      "generation": 3,
+      "best_fitness": 0.5168789751961352,
+      "mean_fitness": 0.513895326303199,
+      "features_selected": 580
+    },
+    {
+      "generation": 4,
+      "best_fitness": 0.5168789751961352,
+      "mean_fitness": 0.5137899207875887,
+      "features_selected": 580
+    },
+    {
+      "generation": 5,
+      "best_fitness": 0.5170038636885528,
+      "mean_fitness": 0.5140748348519348,
+      "features_selected": 566
+    },
+    {
+      "generation": 6,
+      "best_fitness": 0.5170038636885528,
+      "mean_fitness": 0.513872256722706,
+      "features_selected": 566
+    },
+    {
+      "generation": 7,
+      "best_fitness": 0.5170038636885528,
+      "mean_fitness": 0.5136765797235399,
+      "features_selected": 566
+    },
+    {
+      "generation": 8,
+      "best_fitness": 0.5170038636885528,
+      "mean_fitness": 0.513834914171651,
+      "features_selected": 566
+    },
+    {
+      "generation": 9,
+      "best_fitness": 0.5170038636885528,
+      "mean_fitness": 0.5139623238502111,
+      "features_selected": 566
+    },
+    {
+      "generation": 10,
+      "best_fitness": 0.5170038636885528,
+      "mean_fitness": 0.514100735610246,
+      "features_selected": 566
+    },
+    {
+      "generation": 11,
+      "best_fitness": 0.5170038636885528,
+      "mean_fitness": 0.514189848678756,
+      "features_selected": 566
+    },
+    {
+      "generation": 12,
+      "best_fitness": 0.5170038636885528,
+      "mean_fitness": 0.5141930885686754,
+      "features_selected": 566
+    },
+    {
+      "generation": 13,
+      "best_fitness": 0.5170038636885528,
+      "mean_fitness": 0.5140629407097999,
+      "features_selected": 566
+    },
+    {
+      "generation": 14,
+      "best_fitness": 0.5171733552139764,
+      "mean_fitness": 0.5143002472064385,
+      "features_selected": 547
+    },
+    {
+      "generation": 15,
+      "best_fitness": 0.5171733552139764,
+      "mean_fitness": 0.5145774610775644,
+      "features_selected": 547
+    }
+  ],
+  "config": {
+    "data_dir": "./dataset",
+    "categories": [
+      "Normal",
+      "TB"
+    ],
+    "img_size": 224,
+    "quantum_population": 30,
+    "quantum_generations": 15,
+    "num_workers": 4,
+    "n_jobs": 4,
+    "gpu_used": true,
+    "gpu_name": "NVIDIA GeForce RTX 2050"
+  },
+  "file_paths": {
+    "ensemble": "./saved_models\\tb_detector_v1_20260201_135222_ensemble.pkl",
+    "features": "./saved_models\\tb_detector_v1_20260201_135222_features.pkl",
+    "metadata": "./saved_models\\tb_detector_v1_20260201_135222_metadata.json"
+  }
+}
